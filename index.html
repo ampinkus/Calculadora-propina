@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora_Propina</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+
+  <body style="background-color: darkslateblue">
+    <div class="titulo">Calculadora de Propinas</div>
+    <div class="sub-titulo" id="texto-inicial"></div>
+    <body onload= "message()"></body>
+    <p></p>
+    <div class="box">
+      <div class="calculadora">
+        <h3 class="texto-interno">Total cuenta</h3>
+        <!--  onkeyup="calculaCuenta()" actualiza el valor del campo cada vez que presiono una tecla  -->
+        <input
+          id="total-cuenta"
+          onkeyup="calculaCuenta()"
+          type="text"
+          class="input"
+          name="totalCuenta"
+          placeholder="$"
+          min="0"
+        />
+        <h3 class="texto-interno">Propina %</h3>
+        <input
+          id="propina"
+          onkeyup="calculaCuenta()"
+          type="number"
+          class="input"
+          name="propina"
+          placeholder="%"
+          min="0"
+          max="100"
+        />
+        <h3 class="texto-interno">Comensales></h3>
+        <button
+          type="button"
+          id="masComensales"
+          onclick="masComensales()"
+          class="boton"
+        >
+          +
+        </button>
+        <input type="text" id="numero-comensales" placeholder="1" />
+        <button
+          type="button"
+          id="menosComensales"
+          onclick="menosComensales()"
+          class="boton"
+        >
+          -
+        </button>
+        <h3 class="texto-interno">Cada comensal $</h3>
+        <input
+          type="text"
+          class="input"
+          name="propina"
+          id="precio-comensal"
+          placeholder="$"
+        />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
